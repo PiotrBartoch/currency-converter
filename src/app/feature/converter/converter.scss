@@ -1,0 +1,15 @@
+:host {
+  display: flex;
+  .conversionForm {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+
+    .fromCurrency,
+    .toCurrency {
+      display: flex;
+      gap: 1rem;
+      margin-left: 1rem;
+    }
+  }
+}

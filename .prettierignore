@@ -1,0 +1,24 @@
+#packages
+node_modules/
+package-lock.json
+
+#others
+../server
+
+#documentation
+
+#configs
+.awcache
+.idea
+.vscode
+web.config
+
+#distros etc.
+compiled/
+coverage/
+config/coverage/
+dist/
+dll
+testresults/
+
+

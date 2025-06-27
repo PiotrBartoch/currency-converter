@@ -1,0 +1,38 @@
+<form class="conversionForm" [formGroup]="conversionForm">
+  <div class="fromCurrency">
+    <mat-form-field>
+      <mat-label>Amount</mat-label>
+      <input matInput formControlName="amountFrom" />
+    </mat-form-field>
+    <mat-form-field>
+      <mat-label>Currency</mat-label>
+      <mat-select disableRipple formControlName="fromCurrency">
+        @for (currency of currencies$ | async; track currency.short_code) {
+          <mat-option [value]="currency.short_code">{{
+            currency.name
+          }}</mat-option>
+        } @empty {
+          <mat-option disabled>No currencies to select</mat-option>
+        }
+      </mat-select>
+    </mat-form-field>
+  </div>
+  <div class="toCurrency">
+    <mat-form-field>
+      <mat-label>Result</mat-label>
+      <input matInput [readonly]="true" value="{{ result }}" />
+    </mat-form-field>
+    <mat-form-field>
+      <mat-label>Currency</mat-label>
+      <mat-select disableRipple formControlName="toCurrency">
+        @for (currency of currencies$ | async; track currency.short_code) {
+          <mat-option [value]="currency.short_code">{{
+            currency.name
+          }}</mat-option>
+        } @empty {
+          <mat-option disabled>No currencies to select</mat-option>
+        }
+      </mat-select>
+    </mat-form-field>
+  </div>
+</form>
