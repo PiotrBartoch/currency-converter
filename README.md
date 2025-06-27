@@ -33,8 +33,9 @@ npm install
 To start a local development server, run:
 
 ```bash
-ng serve
+npm run start
 ```
+Application is under url: http://localhost:4200/
 
 
 
